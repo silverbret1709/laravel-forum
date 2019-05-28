@@ -15,7 +15,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('JWT', ['only' => ['login', 'signup']]);
+        $this->middleware('JWT', ['except' => ['login', 'signup']]);
     }
 
     /**
@@ -84,6 +84,7 @@ class AuthController extends Controller
 
     public function signup(Request $request)
     {
+
 
         User::create($request->all());
 

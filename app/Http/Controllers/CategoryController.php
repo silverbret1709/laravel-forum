@@ -18,6 +18,7 @@ class CategoryController extends Controller
     public function index()
     {
         //
+        $this->middleware('JWT', ['except' => ['index','show']]);
         return CategoryResource::collection(Category::latest()->get());
 
     }
