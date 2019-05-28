@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SignupRequest;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -83,7 +84,7 @@ class AuthController extends Controller
         ]);
     }
 
-    public function signup(Request $request)
+    public function signup(SignupRequest $request)
     {
 
 
