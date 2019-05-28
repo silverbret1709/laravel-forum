@@ -10,6 +10,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ReplyController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('JWT', ['only' => ['index', 'show']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -78,6 +83,8 @@ class ReplyController extends Controller
      */
     public function update(Question $question, Request $request, Reply $reply)
     {
+
+
         //
         $reply->update($reply->all());
         return \response('Updated', Response::HTTP_ACCEPTED);
