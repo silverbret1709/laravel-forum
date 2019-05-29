@@ -48,7 +48,7 @@ class CategoryController extends Controller
         $category->slug = Str::slug($request->name);
         $category->save();
 
-        return response('created', \Symfony\Component\HttpFoundation\Response::HTTP_CREATED);
+        return response(new CategoryResource($category), \Symfony\Component\HttpFoundation\Response::HTTP_CREATED);
     }
 
     /**
@@ -89,7 +89,7 @@ class CategoryController extends Controller
             'slug' => Str::slug($request->name)
         ]);
 
-        return \response('Updated', \Symfony\Component\HttpFoundation\Response::HTTP_ACCEPTED);
+        return \response(new CategoryResource($category), \Symfony\Component\HttpFoundation\Response::HTTP_ACCEPTED);
     }
 
     /**

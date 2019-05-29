@@ -86,7 +86,7 @@ class ReplyController extends Controller
 
 
         //
-        $reply->update($reply->all());
+        $reply->update($request->all());
         return \response('Updated', Response::HTTP_ACCEPTED);
     }
 
