@@ -21,10 +21,12 @@
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
         "vue": "^2.5.17",
-        "vue-template-compiler": "^2.6.10"
+        "vue-template-compiler": "^2.6.10",
+        "marked": "^0.6.2"
     },
     "dependencies": {
         "vue-router": "^3.0.6",
+        "vue-simplemde": "^0.5.2",
         "vuetify": "^1.5.14"
     }
 }
